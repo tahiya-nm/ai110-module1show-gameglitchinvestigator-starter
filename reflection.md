@@ -5,8 +5,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  - The game showed a simple title, a button for developer debug info, then a box to enter your guess and a button below it to submit it. There was another button below it to start a new game. When you submit a guess, it accepts it on the first go, but for each submission after that, you have to click submit twice for it to register. 
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+  - The first bug was that the hint was incorrect, it kept telling me to go lower when it should have been saying higher (I saw the real number by expanding the debug info).
+  - The second bug was that the game accepted my guess on the first try, but for each subsequent guess, I had to click submit twice for it to register. This was very confusing and made the game frustrating to play. On the first submit click, it would enter my previous guess number into the developer debug info history. On the second click, it registered the actual new guess. 
+  - When I start a new game, it sometimes says I have 8 attempts left, and sometimes it says 7.
+  - If I guess correctly, the final score that it shows me in the "You won!" message is different from the score that is shown in the developer debug info. The score in the debug info is correct, but the score in the "You won!" message is incorrect.
 
 ---
 
