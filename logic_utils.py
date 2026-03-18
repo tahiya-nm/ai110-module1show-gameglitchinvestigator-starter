@@ -38,6 +38,7 @@ def check_guess(guess, secret):
 
     outcome examples: "Win", "Too High", "Too Low"
     """
+    # FIX: Updated the logic to display correct hint message based on whether the guess is too high or too low.
     if guess == secret:
         return "Win", "🎉 Correct!"
 

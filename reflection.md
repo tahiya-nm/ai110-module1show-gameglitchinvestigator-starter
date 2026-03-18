@@ -17,17 +17,22 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  - I used Claude Code and GitHub Copilot on this project.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  - I asked Claude Code to help me refactor the parse_guess and check_guess functions from app.py into logic_utils.py. It successfully refactored the function and I verified that it worked by running the game and testing it to see if the guesses were being parsed correctly and that the hints were being given correctly based on the guess. The game worked as expected after the refactor, so I knew that the AI's suggestion was correct.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  - When I asked Claude Code to help me generate a pytest case to specifically test and target the bugs I fixed, it generated a test that was not passing due to an error in the test code itself. The test was supposed to check if the check_guess function was returning the correct hint based on the guess, but it had a syntax error that caused it to fail. I verified that the test was incorrect by looking at the error message and realizing that there was a mistake in the test code, not in the actual game code. I then had to fix the test code manually to get it to run correctly.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+  - I decided that a bug was really fixed by running the game and testing it manually to see if the behavior that was previously buggy was now working as expected. For example, after fixing the hint logic, I ran the game and made guesses that were too high and too low to see if the hints were now correct. After fixing the issue with having to click submit twice, I ran the game and made multiple guesses to see if they were being registered on the first click. I also checked the developer debug info to see if the history of guesses was being updated correctly.
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  - One test I ran was a manual test where I played the game and made a series of guesses to see if the hints were correct and if the game was registering my guesses on the first click. This test showed me that after fixing the hint logic, the hints were now correct based on whether my guess was too high or too low. It also showed me that after fixing the submit button issue, my guesses were being registered on the first click instead of requiring two clicks. This gave me confidence that the bugs I fixed were actually resolved.
 - Did AI help you design or understand any tests? How?
+  - Yes, AI helped me design a pytest case to test the check_guess function. I asked Claude Code to generate a test case that would check if the function was returning the correct hint based on the guess. The AI generated a test that included different scenarios for guesses that were too high, too low, and correct. This helped me understand how to structure my tests and what cases to consider when testing the function. However, I had to fix an error in the generated test code to get it to run correctly.
 
 ---
 
