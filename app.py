@@ -118,6 +118,8 @@ if submit:
                     f"Score: {st.session_state.score}"
                 )
 
+# FIX: Moved debug expander to after the submit block so it reads the updated
+# session state score, matching what the "You won!" message displays.
 with st.expander("Developer Debug Info"):
     st.write("Secret:", st.session_state.secret)
     st.write("Attempts:", st.session_state.attempts)
