@@ -38,6 +38,11 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
+### Demo: "Go Lower!" Hint
 <img src="images/go_lower.png" alt="Go Lower">
+
+### Demo: "Go Higher!" Hint
 <img src="images/go_higher.png" alt="Go Higher">
+
+### Demo: Winning the Game
 <img src="images/game-won.png" alt="You Win!">
