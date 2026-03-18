@@ -59,7 +59,7 @@ def check_guess(guess, secret):
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
     if outcome == "Win":
-        # FIX: Removed the `+ 1` that deducted 10 extra points on every win.
+        # FIX: Removed the error that deducted 10 extra points on every win.
         points = 100 - 10 * attempt_number
         if points < 10:
             points = 10

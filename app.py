@@ -31,7 +31,10 @@ if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
 if "attempts" not in st.session_state:
-    st.session_state.attempts = 1
+    # FIX: Removed the off-by-one bug that caused the game to start at -1 the number of
+    # allowed attempts the first time you ran it. Now it starts at the correct number of
+    # attempts based on the selected difficulty.
+    st.session_state.attempts = 0
 
 if "score" not in st.session_state:
     st.session_state.score = 0
@@ -64,7 +67,10 @@ new_game = st.button("New Game 🔁")
 
 if new_game:
     st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
+    st.session_state.secret = random.randint(low, high)
+    st.session_state.status = "playing"
+    st.session_state.history = []
+    st.session_state.score = 0      # FIX: Added this line to reset the score when starting a new game.
     st.success("New game started.")
     st.rerun()
 
