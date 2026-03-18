@@ -38,10 +38,6 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo
 
-![Game Glitch Investigator - Go Lower](go-lower.png)
-![Game Glitch Investigator - Go Higher](go-higher.png)
-![Game Glitch Investigator - You Won](game-won.png)
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+<img src="assets/go-lower.png" alt="Go Lower">
+<img src="assets/go-higher.png" alt="Go Higher">
+<img src="assets/game-won.png" alt="You Win!">
